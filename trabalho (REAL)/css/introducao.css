@@ -55,31 +55,76 @@ header img:first-child {
 }
 
 /* Carrossel */
-.carrosel {
+.carrosel{
+    margin: 0 auto;
     width: 100%;
-    max-width: 900px;
     height: 500px;
-    position: relative;
-    margin: 0 auto 50px;
-    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-.carrosel-img {
-    width: 100%;
+.slides{
+    width: 400px;
+    height: 400px;
+    display: flex;    
+}
+.slides input{
+    display: none;
+}
+.imagensSel-container {
+    display: flex;
+    width: 500%; 
     height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: margin-left 0.5s ease;
+}
+.imagensSel{
+    width: 100%;
+    flex: 0 0 100%;
+}
+.imagensSel img{
+    max-width: 1225px;
+    height: 500px;
+    object-fit: cover
 }
 
-.carrosel-img.active {
-    opacity: 1;
+.manual-nav{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .imagensSel-container {
+    margin-left: 0;
+}
+#radio2:checked ~ .imagensSel-container {
+    margin-left: -600%;
+}
+#radio3:checked ~ .imagensSel-container {
+    margin-left: -1000%
+}
+#radio4:checked ~ .imagensSel-container {
+    margin-left: -300%;
+}
+#radio5:checked ~ .imagensSel-container {
+    margin-left: -400%;
+}
+
 
 /* Botão VER CURSOS */
 .botao {
@@ -112,27 +157,6 @@ header img:first-child {
     box-shadow: 0 4px 10px rgba(247, 147, 30, 0.5);
 }
 
-/* Indicadores do carrossel (opcional para JS) */
-.carrossel-indicadores {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.carrossel-indicador {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carrossel-indicador.active {
-    background-color: #F7931E;
-    transform: scale(1.2);
-}
 
 /* Responsividade */
 @media (max-width: 768px) {
