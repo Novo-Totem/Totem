@@ -50,7 +50,7 @@ header img:first-child {
 /* Seção de texto */
 .text h1 {
     font-size: 3.5rem;
-    color: #F7931E;
+    color: #fff;
     margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -73,6 +73,7 @@ header img:first-child {
   height: 100%;
   transform: translateX(0);
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .slides {
@@ -90,7 +91,7 @@ header img:first-child {
 .imagensSel img {
     width: 920px;
     height: 500px;
-  object-fit: contain;
+    object-fit: cover;
 
 }
 

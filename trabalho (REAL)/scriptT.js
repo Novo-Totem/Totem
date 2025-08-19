@@ -6,7 +6,7 @@ const img = document.querySelectorAll('#imgs img')
 
 let idx = 0
 
-let interval = setInterval(run, 2000)
+let interval = setInterval(run, 5000)
 
 function run() {
     idx++
@@ -20,12 +20,12 @@ function changeImage() {
         idx = img.length - 1
     }
 
-    imgs.style.transform = `translateX(${-idx * 920}px)`
+    imgs.style.transform = `translateX(${-idx * 820}px)`
 }
 
 function resetInterval() {
 clearInterval(interval)
-interval = setInterval(run, 2000)
+interval = setInterval(run, 5000)
 
 }
 
