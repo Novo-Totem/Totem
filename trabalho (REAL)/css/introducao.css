@@ -151,6 +151,45 @@ header img:first-child {
     box-shadow: 0 4px 10px rgba(247, 147, 30, 0.5);
 }
 
+/* Footer styles */
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background-color: #023e73a6;
+    position: absolute;
+    bottom:0%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+}
+
+.logoSenac img {
+    max-height: 80px;
+    margin-bottom: 15px;
+}
+
+.footer-creditos p {
+    color: #f28705;
+    font-size: 1rem;
+    margin-left: 100px;
+    width: 100px;
+}
+
+.colunas {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+    color: #f2f2f2;
+}
+
+.logo-professor {
+    display: flex;
+    align-items: center;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
