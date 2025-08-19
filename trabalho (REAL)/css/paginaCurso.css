@@ -18,19 +18,25 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .page-container {
     width: 100%;
     max-width: 1080px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Header styles */
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 30px;
+    height: 10vh;
 }
 
 header h1 {
@@ -46,12 +52,16 @@ header h1 {
 .search-container {
    
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    
 }
 
 header input {
     padding: 12px 20px;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     border-radius: 30px;
     border: none;
     font-size: 1rem;
@@ -92,9 +102,9 @@ header input {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0 25px;
+    gap: 25px 25px;
     width: 100%;
-    height: 750px;
+    height: auto;
     margin: 0;
     align-items: center;
     padding: 30px;
@@ -107,7 +117,7 @@ header input {
     text-decoration: none;
     width: 300px;
     height: 285px;
-    background-color: #023e73a6;
+    background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -131,7 +141,11 @@ header input {
 .img-card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;;
+    border-bottom: 2px solid #00368c;
+    padding-bottom: 25px;
+    background-color: #f3f3f3;
+    padding: 25px 15px;
 }
 
 .img-card img {
@@ -140,21 +154,21 @@ header input {
 }
 
 .card-text {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: "titulo";
 }
 
-
 .card-text h2 {
-    color: #f28705;
+    color: #00368c;
     font-size: 1.4rem;
-    width: 250px;
-    height: 52px;
-    align-items: center;
+    width: 90%;
+    height: auto;
+    text-align: center;
 }
 
 /* Footer styles */
@@ -164,6 +178,11 @@ header input {
     text-align: center;
     padding: 30px;
     background-color: #023e73a6;
+    position: absolute;
+    bottom:0%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
 }
 
 .logoSenac img {
@@ -174,15 +193,24 @@ header input {
 .footer-creditos p {
     color: #f28705;
     font-size: 1rem;
+    margin-left: 100px;
+    width: 100px;
 }
 
 .colunas {
     display: flex;
+    width: 100%;
     justify-content: space-around;
     padding: 20px;
     gap: 10px;
     color: #f2f2f2;
 }
+
+.logo-professor {
+    display: flex;
+    align-items: center;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -193,7 +221,7 @@ header input {
     }
 
     .card {
-        width: 200px;
+        width: 220px;
         height: auto;
         gap: 20px;
     }
