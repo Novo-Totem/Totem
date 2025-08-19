@@ -124,7 +124,7 @@ button {
   transition: background 0.2s, transform 0.2s;
 }
 
-button:hover {
+button:active {
   transform: scale(1.05);
 }
 
@@ -133,7 +133,7 @@ button:hover {
   color: #fff;
 }
 
-.inscrever:hover {
+.inscrever:active {
   background: #ea580c;
 }
 
@@ -142,10 +142,58 @@ button:hover {
   color: #fff;
 }
 
-.sobre:hover {
+.sobre:active {
   background: #1d4ed8;
 }
 
+.pags-sobre {
+  width: 50%;
+  height: 300px;
+  padding: 30px;
+  background-color: #1e2a38ec;
+  z-index: 1;
+  top: -20%;
+  left: 25%;
+  right: -25%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.topo-sobre {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f97316;
+  padding-left: 0.5rem;
+}
+
+.texto {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.close-button {
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:active, .close-button:focus {
+  color: #f97316;
+  transform: rotate(90deg);
+}
 /* Responsividade */
 @media (max-width: 600px) {
   .topo h1 {
