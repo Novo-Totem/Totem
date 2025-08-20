@@ -1,10 +1,9 @@
 const imgs = document.getElementById('imgs')
-const leftBtn = document.getElementById('left')
-const rightBtn = document.getElementById('right')
-
 const img = document.querySelectorAll('#imgs img')
 
 let idx = 0
+let startX = 0
+let endX = 0
 
 let interval = setInterval(run, 5000)
 
@@ -20,23 +19,33 @@ function changeImage() {
         idx = img.length - 1
     }
 
-    imgs.style.transform = `translateX(${-idx * 820}px)`
+    const imgWidth = img[0].clientWidth
+    imgs.style.transform = `translateX(${-idx * imgWidth}px)`
 }
 
 function resetInterval() {
-clearInterval(interval)
-interval = setInterval(run, 5000)
-
+    clearInterval(interval)
+    interval = setInterval(run, 5000)
 }
 
-rightBtn.addEventListener('click', () => {
-    idx++
-    changeImage()
-    resetInterval()
+/* --- Suporte a Swipe (dedo) --- */
+imgs.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX
 })
 
-leftBtn.addEventListener('click', () => {
-    idx--
-    changeImage()
-    resetInterval()
+imgs.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX
+    let diff = endX - startX
+
+    if (Math.abs(diff) > 50) { // precisa arrastar pelo menos 50px
+        if (diff < 0) {
+            // deslizou pra esquerda → próxima imagem
+            idx++
+        } else {
+            // deslizou pra direita → imagem anterior
+            idx--
+        }
+        changeImage()
+        resetInterval()
+    }
 })
