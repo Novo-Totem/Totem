@@ -7,7 +7,7 @@
 }
 @font-face {
     font-family: "Budão";
-    src: url(../fontes/SourceCodePro-Italic-VariableFont_wght.ttf);
+    src: url(../fontes/ArchivoBlack-Regular.ttf);
 }
 
 body {
@@ -16,6 +16,8 @@ body {
     background-size: cover;
     color: #f2f2f2;
     min-height: 100vh;
+    color: white;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     z-index: 0;
@@ -35,14 +37,14 @@ header {
 header img {
     height: 80px;
 }
-#imgDesconto img{
-        transform: rotate(15deg);
-        width: 400px;
-        top: 0%;
-        left: 83%;
-        z-index: 999;
-        position: absolute;
-    }
+#imgDesconto{
+    transform: rotate(15deg);
+    width: 400px;
+    top: -7%;
+    left: 45%;
+    z-index: 999;
+    position: absolute;
+}
 header img:first-child {
     max-width: 30%;
 }
@@ -57,7 +59,12 @@ header img:first-child {
     padding: 40px 60px;
     text-align: center;
     height: 80vh;
+    justify-content: center; /* centraliza vertical */
+    padding: 40px 60px;
+    text-align: center;
+    min-height: calc(100vh - 400px);
 }
+
 @font-face {
     font-family: "titulo";
     src: url(../fontes/Poppins-Bold.ttf);
@@ -82,6 +89,7 @@ header img:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
 }
 
 .imagensSel-container {
@@ -108,30 +116,11 @@ header img:first-child {
     width: 920px;
     height: 500px;
     object-fit: cover;
-
-}
-
-.btn {
-  background: rgba(0, 0, 0, 0.4);
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.btn img {
-  width: 30px;
-  height: 30px;
 }
 
 /* Botão VER CURSOS */
 .botao {
+    margin-top: 75px;
 }
 
 .botao a {
