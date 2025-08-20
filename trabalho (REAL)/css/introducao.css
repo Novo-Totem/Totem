@@ -15,7 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    min-height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     z-index: 0;
