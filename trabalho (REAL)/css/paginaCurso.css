@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: "Budão";
-    src: url(../fontes/SourceCodePro-Italic-VariableFont_wght.ttf);
+    src: url(../fontes/ArchivoBlack-Regular.ttf);
 }
 
 body {
@@ -149,6 +149,7 @@ header input {
 
 .img-card img {
     width: 140px;
+    min-height: 140px;
     object-fit: contain;
 }
 
@@ -225,16 +226,9 @@ header input {
         gap: 20px;
     }
 
-
-}
-
-@media (max-width: 768px) {
-    
-    
     header h1 {
         font-size: 2rem;
     }
-    
     
     .img-card {
     display: flex;
