@@ -154,6 +154,12 @@ button:hover {
   background: #1d4ed8;
 }
 
+.pags-sobre{
+  position: absolute;
+  background-color: #1d4ed8;
+  top: 5vh;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
   .topo h1 {
