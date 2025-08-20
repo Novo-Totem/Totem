@@ -128,7 +128,6 @@ header input {
 
 .card:active {
     font-family: "titulo";
-    src: url(../fontes/Poppins-ExtraBoldItalic.ttf);
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
     .img-card {
@@ -150,6 +149,7 @@ header input {
 
 .img-card img {
     width: 140px;
+    min-height: 140px;
     object-fit: contain;
 }
 
@@ -226,16 +226,9 @@ header input {
         gap: 20px;
     }
 
-
-}
-
-@media (max-width: 768px) {
-    
-    
     header h1 {
         font-size: 2rem;
     }
-    
     
     .img-card {
     display: flex;
