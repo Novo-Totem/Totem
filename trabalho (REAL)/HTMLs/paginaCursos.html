@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/paginaCurso.css">
+    
+    <script src="../js/inatividade.js"></script>
     <title>Senac - Cursos</title>
 </head>
 <body>
@@ -12,24 +14,25 @@
             <h1>Cursos Oferecidos</h1>
             <div class="search-container">
                 <input type="text" placeholder="Buscar cursos..." aria-label="Buscar cursos">
+                <button class="butao-todos-cursos">TODOS OS CURSOS</button>
             </div>
-            <button class="butao-todos-cursos">TODOS OS CURSOS</button>
+            
         </header>
 
         <main class="container">
             <section class="lista-cards">
-                <a href="#" class="card card-ti">
+                <a href="pagTi.html" class="card card-ti">
                     <div class="img-card img-ti">
-                        <img src="../img/imgs/IMG.TEC.jpg" alt="TECNOLOGIA DA INFORMAÇÃO" hidden>
+                        <img src="../img/img.icons/icons8-monitor-96.png" alt="TECNOLOGIA DA INFORMAÇÃO" >
                     </div>
-                    <div class="card-text ti-text">
+                    <div class="card-text">
                         <h2>TÉCNICO DA INFORMÁTICA</h2>
                     </div>
                 </a>
 
                 <a href="#" class="card card-comercio">
                     <div class="img-card img-comercio">
-                        <img src="../img/imgs/IMG.comércio.jpg" alt="COMÉRCIO" hidden>
+                        <img src="../img/img.icons/icons8-loja-100.png" alt="COMÉRCIO" >
                     </div>
                     <div class="card-text">
                         <h2>COMÉRCIO</h2>
@@ -38,7 +41,7 @@
 
                 <a href="#" class="card card-saude">
                     <div class="img-card img-saude">
-                        <img src="../img/imgs/img.saúde.png" alt="SAÚDE" hidden>
+                        <img src="../img/img.icons/icons8-confiança-100.png" alt="SAÚDE">
                     </div>
                     <div class="card-text">
                         <h2>SAÚDE</h2>
@@ -71,90 +74,56 @@
                         <h2>GESTÃO</h2>
                     </div>
                 </a>
+
+                <a href="pagTi.html" class="card card-ti">
+                    <div class="img-card img-ti">
+                        <img src="../img/img.icons/icons8-monitor-96.png" alt="TECNOLOGIA DA INFORMAÇÃO" >
+                    </div>
+                    <div class="card-text">
+                        <h2>COMUNICAÇÃO</h2>
+                    </div>
+                </a>
+
+                <a href="pagTi.html" class="card card-ti">
+                    <div class="img-card img-ti">
+                        <img src="../img/img.icons/icons8-monitor-96.png" alt="TECNOLOGIA DA INFORMAÇÃO" >
+                    </div>
+                    <div class="card-text">
+                        <h2>BELEZA</h2>
+                    </div>
+                </a>
+
+                <a href="pagTi.html" class="card card-ti">
+                    <div class="img-card img-ti">
+                        <img src="../img/img.icons/icons8-monitor-96.png" alt="TECNOLOGIA DA INFORMAÇÃO" >
+                    </div>
+                    <div class="card-text">
+                        <h2>ARTES</h2>
+                    </div>
+                </a>
+
+                <a href="pagTi.html" class="card card-ti">
+                    <div class="img-card img-ti">
+                        <img src="../img/img.icons/icons8-monitor-96.png" alt="TECNOLOGIA DA INFORMAÇÃO" >
+                    </div>
+                    <div class="card-text">
+                        <h2>EDUCACIONAL</h2>
+                    </div>
+                </a>
             </section>
 
-            <div class="inside-card" hidden>
-                <section class="topo">
-                    <h1>Tecnologia da Informação</h1>
-                    <p>Aprenda sobre desenvolvimento web, programação, segurança de dados e redes de computadores. Os cursos preparam o aluno para um mercado em constante expansão e com alta demanda.</p>
-                </section>
-                <section class="main-card">
-                    <h2>Matutino - 08H às 12H</h2>
-
-                    <section class="carrosel-cards">
-                        <div class="sub-card">
-
-                            <div class="img-card img-ti">
-                                <img src="../img/imgs/IMG.TEC.jpg" alt="TECNOLOGIA DA INFORMAÇÃO" hidden>
-                            </div>
-
-                            <div class="card-text ti-text">
-                                <h3>Técnico em Informática para Internet</h3>
-                                <p>Carga Horária: 80 horas</p>
-                                <p>Valor: R$ 200,00</p>
-                            </div>
-
-                            <div class="botoes-sub-card">
-                                <button onclick="">INSCREVA-SE</button>
-                                <button onclick="">SOBRE</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <h2>Vespertino - 14H às 18H</h2>
-
-                    <section class="carrosel-cards">
-                        <div class="sub-card">
-
-                            <div class="img-card img-ti">
-                                <img src="../img/imgs/IMG.TEC.jpg" alt="TECNOLOGIA DA INFORMAÇÃO" hidden>
-                            </div>
-
-                            <div class="card-text ti-text">
-                                <h3>Técnico em Informática para Internet</h3>
-                                <p>Carga Horária: 80 horas</p>
-                                <p>Valor: R$ 200,00</p>
-                            </div>
-
-                            <div class="botoes-sub-card">
-                                <button onclick="">INSCREVA-SE</button>
-                                <button onclick="">SOBRE</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <h2>Noturno - 19H às 22H</h2>
-
-                    <section class="carrosel-cards">
-                        <div class="sub-card">
-
-                            <div class="img-card img-ti">
-                                <img src="../img/imgs/IMG.TEC.jpg" alt="TECNOLOGIA DA INFORMAÇÃO" hidden>
-                            </div>
-
-                            <div class="card-text ti-text">
-                                <h3>Técnico em Informática para Internet</h3>
-                                <p>Carga Horária: 80 horas</p>
-                                <p>Valor: R$ 200,00</p>
-                            </div>
-
-                            <div class="botoes-sub-card">
-                                <button onclick="">INSCREVA-SE</button>
-                                <button onclick="">SOBRE</button>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-
+            
             </div>
         </main>
 
         <footer class="footer">
-            <div class="logoSenac">
-                <img src="../img/logoSenac.png" alt="LOGO SENAC">
-            </div>
-            <div class="footer-creditos">
-                <p>Professor: Vinicius</p>
+            <div class="logo-professor">
+                <div class="logoSenac">
+                    <img src="../img/marca_branca-qioshtdj656d7xvmr6klexd6gy7kwf65t9ytcmxfwi.png" alt="LOGO SENAC">
+                </div>
+                <div class="footer-creditos">
+                    <p>Professor: Vinicius Aires</p>
+                </div>
             </div>
             <div class="colunas">
                 <div class="footer-nomes-colunaUm">

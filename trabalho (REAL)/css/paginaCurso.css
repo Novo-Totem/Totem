@@ -4,45 +4,64 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "Budão";
+    src: url(../fontes/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
 
 body {
     font-family: Arial, sans-serif;
     background-image: url(../img/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: #f2f2f2;
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .page-container {
     width: 100%;
     max-width: 1080px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Header styles */
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 30px;
+    height: 10vh;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #F7931E;
+    color: #f28705;
+    font-family: "titulo";
 }
-
+@font-face {
+    font-family: "titulo";
+    src: url(../fontes/Poppins-Bold.ttf);
+}
 .search-container {
+   
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    
 }
 
 header input {
     padding: 12px 20px;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     border-radius: 30px;
     border: none;
     font-size: 1rem;
@@ -51,8 +70,8 @@ header input {
 
 .butao-todos-cursos {
     padding: 12px 30px;
-    background-color: #F7931E;
-    color: white;
+    background-color: #f28705;
+    color: #f2f2f2;
     border: none;
     border-radius: 30px;
     font-weight: bold;
@@ -61,6 +80,7 @@ header input {
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
+    font-family: "Budão";
 }
 
 .butao-todos-cursos:hover {
@@ -82,124 +102,73 @@ header input {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0 25px;
+    gap: 25px 25px;
     width: 100%;
-    height: 750px;
+    height: auto;
     margin: 0;
     align-items: center;
     padding: 30px;
 }
 
 .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     text-decoration: none;
     width: 300px;
     height: 285px;
-    background-color: #021b47be;
+    background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
-
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-}
-
-.img-card {
-    
-    height: 180px;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-card img {
-    width: 240px;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.img-ti {
-    background: url(../img/imgs/IMG.TEC.jpg);
-    background-size: cover;
-}
-
-.img-comercio {
-    background: url(../img/imgs/IMG.comércio.jpg);
-    background-size: cover;
-}
-
-.img-saude {
-    background: url(../img/imgs/img.saúde.png);
-    background-size: cover;
-}
-
-/*
-.img-gastronomia {
-    background: url(../img/img.icons/icon.gastronomia.png);
-    background-size: cover;
-}*/
-
-.img-ti {
-    background: url(../img/img.icons/);
-    background-size: cover;
-}
-
-.img-ti {
-    background: url(../img/imgs/IMG.TEC.jpg);
-    background-size: cover;
-}
-
-.card-text {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-}
-
-.ti-text {
-    padding: 18px;
-}
-
-.card-text h2 {
-    color: #F7931E;
-    font-size: 1.4rem;
-    width: 250px;
-    height: 52px;
-    align-items: center;
-}
-
-/* Cores específicas para cada card */
-.card-ti {
-    border-top: 8px solid #0062b6;
-}
-
-.card-comercio {
-    border-top: 8px solid #ee9626;
-}
-
-.card-saude {
-    border-top: 8px solid #E24F4F;
-}
-
-.card-gastronomia {
-    border-top: 8px solid #1245a8;
-}
-
-.card-moda {
     border-top: 8px solid #00368c;
 }
 
-.card-gestao {
-    border-top: 8px solid #007FFF;
+.card:active {
+    font-family: "titulo";
+    src: url(../fontes/Poppins-ExtraBoldItalic.ttf);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    .img-card {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+    
+}
+
+.img-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    border-bottom: 2px solid #00368c;
+    padding-bottom: 25px;
+    background-color: #f3f3f3;
+    padding: 25px 15px;
+}
+
+.img-card img {
+    width: 140px;
+    object-fit: contain;
+}
+
+.card-text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "titulo";
+}
+
+.card-text h2 {
+    color: #00368c;
+    font-size: 1.4rem;
+    width: 90%;
+    height: auto;
+    text-align: center;
 }
 
 /* Footer styles */
@@ -208,7 +177,12 @@ header input {
     margin-top: 50px;
     text-align: center;
     padding: 30px;
-    background-color: #021b47be;
+    background-color: #023e73a6;
+    position: absolute;
+    bottom:0%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
 }
 
 .logoSenac img {
@@ -217,17 +191,26 @@ header input {
 }
 
 .footer-creditos p {
-    color: #F7931E;
+    color: #f28705;
     font-size: 1rem;
+    margin-left: 100px;
+    width: 100px;
 }
 
 .colunas {
     display: flex;
+    width: 100%;
     justify-content: space-around;
     padding: 20px;
     gap: 10px;
-    color: rgb(58, 105, 236);
+    color: #f2f2f2;
 }
+
+.logo-professor {
+    display: flex;
+    align-items: center;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -238,8 +221,9 @@ header input {
     }
 
     .card {
-        width: 200px;
+        width: 220px;
         height: auto;
+        gap: 20px;
     }
 
 
@@ -252,11 +236,20 @@ header input {
         font-size: 2rem;
     }
     
+    
     .img-card {
-        height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    }
+
+    .img-card img {
+        width: 120px;
+        object-fit: contain;
     }
     
     .card-text h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
