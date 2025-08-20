@@ -14,7 +14,7 @@ body {
     background-image: url(../img/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: #f2f2f2;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,6 +29,7 @@ header {
     padding: 30px 60px;
     background-color: rgba(64, 61, 252, 0.4);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    height: 10vh;
 }
 
 header img {
@@ -52,9 +53,10 @@ header img:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 40px 60px;
     text-align: center;
+    height: 80vh;
 }
 @font-face {
     font-family: "titulo";
@@ -65,7 +67,6 @@ header img:first-child {
     font-family: "titulo";
     font-size: 3.5rem;
     color: #ffffff;
-    margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
 }
@@ -131,8 +132,6 @@ header img:first-child {
 
 /* Botão VER CURSOS */
 .botao {
-    margin-top: 40px;
-
 }
 
 .botao a {
@@ -165,12 +164,9 @@ header img:first-child {
 /* Footer styles */
 .footer {
     width: 100%;
-    margin-top: 50px;
     text-align: center;
     padding: 30px;
     background-color: #023e73a6;
-    position: absolute;
-    bottom:0%;
     display: flex;
     justify-content: space-around;
     height: 10vh;
