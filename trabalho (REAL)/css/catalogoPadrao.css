@@ -189,16 +189,17 @@ button:hover {
 }
 
 #butaoFechar {
-    color: white;
-    font-size: 5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+  max-width: 93px;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #butaoFechar:hover, #butaoFechar:focus {
-    color: #f97316;
-    transform: rotate(90deg);
+  color: #f97316;
+  transform: rotate(90deg);
 }
 
 
