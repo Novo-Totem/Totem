@@ -229,6 +229,10 @@ button:hover {
   visibility: visible;
 }
 
+.gastronomia p{
+  font-size: 15px;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
   .topo h1 {

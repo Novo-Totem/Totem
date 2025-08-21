@@ -81,7 +81,7 @@
           <p>Valor: R$ 222,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -90,11 +90,97 @@
           <p>Valor: R$ 113,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre"  onclick="buttonAbrir2()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
     </section>
+<!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Dicção, Desinibição e Oratória</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem o objetivo de proporcionar ao participante o desenvolvimento da habilidade de falar em público com o desenvolvimento de técnicas de postura, expressão e comunicação oral, a fim de possibilitar uma comunicação eficaz. Destina-se aos profissionais que desejam adentrar no mercado ou permanecer nele com qualidade e possibilidades reais de crescimento.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Oratória: Comunicação e Técnicas de Apresentação-->
+    <section class="pags-sobre" id="curso-Ora">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Oratória: Comunicação e Técnicas de Apresentação</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>É destinado a profissionais de todas as áreas que desejam desenvolver o domínio das técnicas de apresentação e habilidades para falar em público.</p>
+        </div>
+      </div>
+    </section>
+  <div class="overlay" id="overlay"></div>
   </main>
+<script>
+  const body = document.body;
+  const Sobre = document.querySelector('.pags-sobre');
+  const overlay = document.getElementById('overlay');
+  const butaoAbrir = document.getElementById('butaoAbrido');
+  const botaoFechar = document.getElementById('butaoFechar');
+  
+  /*Dicção, Desinibição e Oratória*/
+  function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Dicção, Desinibição e Oratória FIM*/
+  
+  /*Oratória: Comunicação e Técnicas de Apresentação*/
+  const Sobrea = document.querySelector("#curso-Ora");
+  function buttonAbrir2(){
+    Sobrea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar2(){
+    Sobrea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Oratória: Comunicação e Técnicas de Apresentação FIM*/
+  
+  butaoAbrir.addEventListener('click', butaoAbrido);
+  botaoFechar.addEventListener('click', butaoFechar);
+  overlay.addEventListener('click', butaoFechar);
+
+
+</script>
 </body>
 </html>

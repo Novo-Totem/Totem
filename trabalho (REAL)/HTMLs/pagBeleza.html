@@ -56,7 +56,7 @@
           <p>Valor: R$ 372,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
           <p>Valor: R$ 277,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir2()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -81,11 +81,131 @@
           <p>Valor: R$ 380,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir3()" id="butaoAbrido">Sobre</button>
           </div>
+        </div>
+      </div>
+    </section>
+<!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Atualização em Corte e Escova</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>No momento, você está visualizando Atualização em Corte e Escova – Imperatriz Objetivos Este curso tem como objetivo desenvolver a seguinte competência: Realizar corte e modelagem de cabelos. É destinado a profissionais do segmento de beleza que desejam ampliar os seus conhecimentos na área e aprimorar suas habilidades quanto às novas tendências e tecnologias do mercado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Design e Coloração de Sobrancelhas-->
+    <section class="pags-sobre" id="curso-Sob">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Design e Coloração de Sobrancelhas</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo (s) desenvolver a(s) seguinte(s) competência(s): Realizar design e coloração de sobrancelhas
+          É destinado aos profissionais e estudantes do segmento de beleza que desejam ampliar os seus conhecimentos na área e aprimorar suas habilidades quanto às tendências do mercado.</p>
+        </div>
+      </div>
+    </section>
+    <!--Extensão de Cílios-->
+    <section class="pags-sobre" id="curso-Exc">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Extensão de Cílios</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo promover o domínio da técnica de colagem fio a fio dos cílios sintéticos sobre os cílios naturais, visando o realce do olhar de acordo com as orientações normativas, assegurando a saúde, higiene e proteção do cliente. Destina-se a profissionais e estudantes do segmento de beleza que desejam ampliar os seus conhecimentos na área e aprimorar suas habilidades quanto às tendências do mercado.</p>
         </div>
       </div>
     </section>
   </main>
 </body>
+<script>
+  const body = document.body;
+  const Sobre = document.querySelector('.pags-sobre');
+  const overlay = document.getElementById('overlay');
+  const butaoAbrir = document.getElementById('butaoAbrido');
+  const botaoFechar = document.getElementById('butaoFechar');
+  
+  /*Atualização em Corte e Escova*/
+  function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Atualização em Corte e Escova FIM*/
+  
+  /*Design e Coloração de Sobrancelhas*/
+  const Sobrea = document.querySelector('#curso-Sob');
+  function buttonAbrir2(){
+    Sobrea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar2(){
+    Sobrea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Design e Coloração de Sobrancelhas FIM*/
+  
+  /*Extensão de Cílios*/
+  const Sobreb = document.querySelector('#curso-Exc');
+  function buttonAbrir3(){
+    Sobreb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar3(){
+    Sobreb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Extensão de Cílios FIM*/
+  
+  butaoAbrir.addEventListener('click', butaoAbrido);
+  botaoFechar.addEventListener('click', butaoFechar);
+  overlay.addEventListener('click', butaoFechar);
+</script>
 </html>

@@ -55,7 +55,7 @@
           <p>Valor: R$ 579,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -68,6 +68,48 @@
 
       </div>
     </section>
+    <!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Preparo de Salgados</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          
+        </div>
+
+        <div class="texto gastronomia" >
+          <p>A gastronomia, de forma geral, vem obtendo um faturamento expressivo na economia do país. A pesquisa organizada pela Mintel[1] destaca que 7 bilhões de reais devem ser gastos no consumo de aperitivos. Estes produtos podem ser encontrados em padarias, quiosques, food trucks, lojas, dentre outros estabelecimentos de gastronomia. O principal local de compra de salgados apontado nesses dados é o supermercado, com 63% de preferência dos consumidores, sendo que 42% dos brasileiros consomem salgados fora de casa. Com essa vasta disponibilidade e com as demandas do mundo do trabalho que levam os brasileiros a permanecer mais tempo fora de casa, pode-se inferir que se trata de um mercado ainda em expansão. Devido ao aumento desse setor, ocorre a necessidade de aperfeiçoamento dos profissionais que desejam ingressar ou se atualizar em preparações de salgados</p>
+        </div>
+      </div>
+    </section>
+    <div class="overlay" id="overlay"></div>
   </main>
+  <script>
+  const body = document.body;
+  const Sobre = document.querySelector('.pags-sobre');
+  const overlay = document.getElementById('overlay');
+  const butaoAbrir = document.getElementById('butaoAbrido');
+  const botaoFechar = document.getElementById('butaoFechar');
+  
+  /*Administração Financeira no Coméricio*/
+  function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  </script>
 </body>
 </html>

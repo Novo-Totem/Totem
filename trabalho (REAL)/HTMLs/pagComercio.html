@@ -46,7 +46,7 @@
           <p>Valor: R$ 229,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -55,7 +55,7 @@
           <p>Valor: R$ 72,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir2()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -64,7 +64,7 @@
           <p>Valor: R$ 298,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir3()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -73,7 +73,7 @@
           <p>Valor: R$ 151,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir4()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -82,7 +82,7 @@
           <p>Valor: R$ 188,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir5()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -91,7 +91,7 @@
           <p>Valor: R$ 166,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir6()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -100,7 +100,7 @@
           <p>Valor: R$ 205,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir7()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -109,11 +109,321 @@
           <p>Valor: R$ 71,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir8()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
     </section>
+    
+    <!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Administração Financeira no Comércio</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Não tem objetivo</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Como Vender na Internet-->
+    <section class="pags-sobre" id="curso-Ven">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Como Vender na Internet e Redes Socias</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo desenvolver habilidades que promovem a integração tecnológica, técnicas de vendas nas redes sociais e habilidades de negociação digital.
+          Destina-se a profissionais que buscam promover seus negócios através da internet, aumentando suas receitas, desenvolvendo o marketing profissional, além de fomentar o empreendedorismo e uso da tecnologia no e-commerce.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Empreendorismo-->
+    <section class="pags-sobre" id="curso-Emp">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Empreendedorismo</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo desenvolver a seguinte competência: implantar negócio digital.
+          É destinado a empreendedores e demais profissionais de marketing e comunicação.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Estratégias-->
+    <section class="pags-sobre" id="curso-Est">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Estratégias de Negociação para o Vendedor</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar4()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>O curso de aperfeiçoamento em Estratégias de Negociação para o Vendedor tem como objetivo dar subsídios ao aluno para desenvolver estratégias de negociação em vendas para uma melhor performance de resultados. É destinado ao vendedor e demais profissionais da área de comércio.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Ferramentas de Marketing Digital-->
+    <section class="pags-sobre" id="curso-Mar">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Ferramentas de Marketing Digital</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar5()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Não tem objetivo</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Planejamento de Marketing para Gestores-->
+    <section class="pags-sobre" id="curso-Ges">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Planejamento de Marketing para Gestores</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar6()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Não tem objetivo</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Planejamento Financeiro para o Comércio-->
+    <section class="pags-sobre" id="curso-Com">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Planejamento Financeiro para o Comércio</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar7()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo dar subsídios ao aluno com as principais técnicas e ferramentas de levantamento e análise de dados para elaboração de planejamento financeiro em empresas do Comércio. É destinado a profissionais que atuam ou pretendem atuar no planejamento financeiro nas empresas do Comércio</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--Técnicas Avançandas de Vendas e Atendimento-->
+    <section class="pags-sobre" id="curso-Ate">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Técnicas Avançandas de Vendas e Atendimento</h1>
+          </div>
+
+        
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar8()">×</span>
+          
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo apresentar aos alunos as estratégias e ferramentas utilizadas na comercialização de produtos e/ou serviços com alto valor agregado, sendo uma das exigências o empenho ativo, o conhecimento tecnológico e novas tendências do mercado. Destina-se a profissionais que trabalham com vendas, sejam elas atacado e/ou varejo, marketing, e-commerce e gestão comercial.</p>
+        </div>
+      </div>
+    </section>
+    <div class="overlay" id="overlay"></div>
   </main>
+<script>
+  const body = document.body;
+  const Sobre = document.querySelector('.pags-sobre');
+  const overlay = document.getElementById('overlay');
+  const butaoAbrir = document.getElementById('butaoAbrido');
+  const botaoFechar = document.getElementById('butaoFechar');
+  
+  /*Administração Financeira no Coméricio*/
+  function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Administração Financeira no Coméricio Fim*/
+  
+  /*Administração Financeira no Coméricio*/
+  const Sobrea = document.querySelector('#curso-Ven');
+  function buttonAbrir2(){
+    Sobrea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar2(){
+    Sobrea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Administração Financeira no Coméricio Fim*/
+  
+  /*Empreendedorismo Digital*/
+  const Sobreb = document.querySelector('#curso-Emp');
+  function buttonAbrir3(){
+    Sobreb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar3(){
+    Sobreb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Empreendedorismo Digital Fim*/
+  
+  /*Estratégias de Negociação para o Vendedor*/
+  const Sobrec = document.querySelector('#curso-Est');
+  function buttonAbrir4(){
+    Sobrec.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar4(){
+    Sobrec.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Estratégias de Negociação para o Vendedor Fim*/
+
+  /*Ferramentas de Marketing Digital*/
+  const Sobred = document.querySelector('#curso-Mar');
+  function buttonAbrir5(){
+    Sobred.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar5(){
+    Sobred.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Ferramentas de Marketing Digital Fim*/
+  
+  /*Planejamento de Marketing para Gestores*/
+  const Sobree = document.querySelector('#curso-Ges');
+  function buttonAbrir6(){
+    Sobree.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar6(){
+    Sobree.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Planejamento de Marketing para Gestores Fim*/
+  
+  /*Planejamento Financeiro para o Comércio*/
+  const Sobref = document.querySelector('#curso-Com');
+  function buttonAbrir7(){
+    Sobref.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar7(){
+    Sobref.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Planejamento Financeiro para o Comércio Fim*/
+  
+  /*Técnicas Avançandas de Vendas e Atendimento*/
+  const Sobreg = document.querySelector('#curso-Ate');
+  function buttonAbrir8(){
+    Sobreg.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar8(){
+    Sobreg.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Técnicas Avançandas de Vendas e Atendimento Fim*/
+
+
+  butaoAbrir.addEventListener('click', butaoAbrido);
+  botaoFechar.addEventListener('click', butaoFechar);
+  overlay.addEventListener('click', butaoFechar);
+</script>
 </body>
 </html>
