@@ -145,6 +145,10 @@ header input {
     padding-bottom: 25px;
     background-color: #f3f3f3;
     padding: 25px 15px;
+
+    img {
+        height: 140px;
+    }
 }
 
 .img-card img {
@@ -153,7 +157,7 @@ header input {
 }
 
 .card-text {
-    max-height: 85px;
+    height: 85px;
     width: 100%;
     display: flex;
     justify-content: center;
