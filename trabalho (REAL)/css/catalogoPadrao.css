@@ -78,7 +78,7 @@ body {
   gap: 1.5rem;*/
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 500px;
+  flex-basis: 480px;
   gap: 20px;
 }
 
@@ -94,8 +94,8 @@ body {
   justify-content: space-between;
   transition: transform 0.2s;
 
-  width: 500px;
-  min-width: 500px;
+  width: 480px;
+  min-width: 480px;
 
 }
 
