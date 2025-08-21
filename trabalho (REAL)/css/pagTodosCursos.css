@@ -82,9 +82,13 @@ body {
 
 /* Grid dos cursos */
 .cursos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 480px;
+  gap: 20px;
 }
 
 /* Cards */
@@ -98,7 +102,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
+
+  width: 480px;
+
 }
+
 
 .card:hover {
   transform: translateY(-5px);
@@ -241,11 +249,23 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .topo h1 {
     font-size: 1.8rem;
   }
 
+  .container {
+    margin-top: 12vh;
+  }
+
+  .cursos {
+    display: flex;
+    align-items: center;
+  }
+
+  .card {
+    width: 50%;
+  }
   .turno-section h2 {
     font-size: 1.1rem;
   }
