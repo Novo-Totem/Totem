@@ -159,20 +159,48 @@ button:hover {
 .pags-sobre{
   height: 400px;
   width: 500px;
+  padding: 20px;
   position:fixed;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-
   margin: auto;
   background-color: #2447a7;
   z-index: 2;
   visibility: hidden;
-
-  border-radius: 6px;
+  border-radius: 20px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0, 0.5);
+
+  p {
+    font-size: 1.3rem
+  }
 }
+
+.topo-sobre {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.titulo {
+  width: 378px;
+}
+
+#butaoFechar {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#butaoFechar:hover, #butaoFechar:focus {
+    color: #f97316;
+    transform: rotate(90deg);
+}
+
 
 .pags-sobre.active{
   opacity: 1;
