@@ -32,7 +32,7 @@
           <p>Valor: R$ 99,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
           <p>Valor: R$ 99,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir2()">Sobre</button>
           </div>
         </div>
       </div>
@@ -64,12 +64,132 @@
           <p>Valor: R$ 150,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir3()">Sobre</button>
           </div>
         </div>
 
       </div>
     </section>
-  </main>
+
+      <!--SOBRE-->
+      <section class="pags-sobre">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Preparando-se para o Mercado de Trabalho </h1>
+            </div>
+
+          
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Este curso tem como objetivo orientar os participantes sobre a postura profissional para a busca do primeiro emprego proporcionando habilidades necessárias para inserção no mundo de trabalho. É destinado a pessoas interessadas em ingressar no mundo do trabalho.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--Montagem-->
+      <section class="pags-sobre" id="curso-ml">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Preparando-se para o Mercado de Trabalho</h1>
+            </div>
+
+
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Este curso tem como objetivo orientar os participantes sobre a postura profissional para a busca do primeiro emprego proporcionando habilidades necessárias para inserção no mundo de trabalho. É destinado a pessoas interessadas em ingressar no mundo do trabalho.</p>
+          </div>
+        </div>
+      </section>
+      <div class="overlay" id="overlay"></div>
+
+            <section class="pags-sobre" id="curso-ps">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Práticas Administrativas</h1>
+            </div>
+
+
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Este curso tem como objetivo auxiliá-lo na aquisição de conhecimentos e habilidades para aplicação nas rotinas adiminstrativas. Destina-se a gestores de empresas e também a pessoas que já atuam no setor empresarial e estudantes que desejam adquirir novos conhecimentos na área administrativa.</p>
+          </div>
+        </div>
+      </section>
+      <div class="overlay" id="overlay"></div>
+
+    </main>
+
+<script>
+/* Introdução à Informática - Windows e Office */ 
+const body = document.body;
+const Sobre = document.querySelector('.pags-sobre');
+const overlay = document.getElementById('overlay');
+// tirei o butaoAbrir, pq não existe no HTML
+const botaoFechar = document.getElementById('butaoFechar');
+
+function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
+// botaoFechar funciona normal pelo onclick do span
+overlay.addEventListener('click', buttonFechar);
+
+
+/* Massagem Relaxante */
+const sobrea = document.querySelector('#curso-ml');
+function buttonAbrir2(){
+    sobrea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar2(){
+    sobrea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+/* Primeiros Socorros */
+const sobreb = document.querySelector('#curso-ps');
+function buttonAbrir3(){
+    sobreb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar3(){
+    sobreb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+</script>
+
 </body>
 </html>
