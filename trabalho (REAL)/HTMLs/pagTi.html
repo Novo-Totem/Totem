@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/catalogoPadrao.css">
   <script src="../js/pagCursos.js"></script>
 </head>
-<body>
+<body id="body">
   <main class="container">
     <header class="topo">
         <div class="topo-text">
@@ -67,7 +67,7 @@
           <p>Valor: R$ 429,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonSobre()" id="butaoSobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
       </div>
     </section>
 
-    <section class="pags-sobre" >
+    <section class="pags-sobre" hidden>
 
       <div class="sobre-tec-infor">
 
@@ -145,7 +145,7 @@
           </div>
 
         
-        <span class="close-button" aria-label="Fechar">×</span>
+        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
         </div>
 
         <div class="texto">
@@ -155,6 +155,7 @@
         </div>
       </div>
     </section>
+    <div class="overlay" id="overlay"></div>
   </main>
 </body>
 </html>
