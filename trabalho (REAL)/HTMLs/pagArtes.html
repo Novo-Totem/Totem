@@ -82,11 +82,60 @@
           <p>Valor: R$ 97,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
           </div>
         </div>
       </div>
     </section>
-  </main>
+
+      <!--SOBRE-->
+      <section class="pags-sobre" id="curso-ft">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Fotografia com Celular: Promova seu Negócio nas Redes Sociais </h1>
+            </div>
+
+          
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Não tem Objetivo</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
 </body>
 </html>
+<script>
+/* Introdução à Informática - Windows e Office */ 
+const body = document.body;
+const Sobre = document.querySelector('.pags-sobre');
+const overlay = document.getElementById('overlay');
+// tirei o butaoAbrir, pq não existe no HTML
+const botaoFechar = document.getElementById('butaoFechar');
+
+function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
+// botaoFechar funciona normal pelo onclick do span
+overlay.addEventListener('click', buttonFechar);
+
+
+</script>
