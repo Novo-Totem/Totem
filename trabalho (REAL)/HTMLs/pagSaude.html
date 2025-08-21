@@ -45,7 +45,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Seção Vespertino -->
     <section class="turno-section">
 
@@ -59,7 +59,7 @@
           <p>Valor: R$ 316,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
           </div>
         </div>
 
@@ -69,7 +69,7 @@
           <p>Valor: R$ 161,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="Sobrea" onclick="buttonAbrir2()">Sobre</button>
           </div>
         </div>
 
@@ -93,10 +93,91 @@
 
       </div>
     </section>
+
+    <!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Limpeza de Pele </h1>
+          </div>
+
+        
+        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+        </div>
+
+        <div class="texto">
+          <p>Não tem Objetivo</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Montagem-->
+    <section class="pags-sobre" id="curso-mon">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Massagem Relaxante</h1>
+          </div>
+
+
+        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+        </div>
+
+        <div class="texto">
+          <p>Não tem objetivo</p>
+        </div>
+      </div>
+    </section>
+    <div class="overlay" id="overlay"></div>
     
   </main>
   <script>
 
+/*Introdução à Informática - Windows e Office*/ 
+const body = document.body;
+const Sobre = document.querySelector('.pags-sobre');
+const overlay = document.getElementById('overlay');
+const butaoAbrir = document.getElementById('butaoAbrido');
+const botaoFechar = document.getElementById('butaoFechar');
+
+function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
+overlay.addEventListener('click', butaoFechar);
+
+
+
+/*Montagem e Manutenção de Computadores / Notebooks*/
+const sobrea = document.querySelector('#curso-mon');
+function buttonAbrir2(){
+    Sobrea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar2(){
+    Sobrea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
   </script>
 </body>
 </html>
