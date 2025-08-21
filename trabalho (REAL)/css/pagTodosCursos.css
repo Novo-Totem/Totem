@@ -228,6 +228,7 @@ footer {
   border-radius: 50%;
   transition: background 0.3s;
   margin-right: 60px;
+  margin-bottom: 0px;
 }
 
 .btn:hover {

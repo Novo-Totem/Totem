@@ -55,8 +55,8 @@
           <p>Carga Horária: 60 horas</p>
           <p>Valor: R$ 436,00</p>
           <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
+            <button class="inscrever" >Inscreva-se</button>
+            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
           </div>
         </div>
       </div>
@@ -69,5 +69,56 @@
       </div>
     </section>
   </main>
+
+<!--SOBRE-->
+    <section class="pags-sobre">
+
+      <div class="sobre-tec-infor">
+
+        <div class="topo-sobre">
+
+          <div class="titulo">
+            <h1>Modelagem e Costura para Iniciantes </h1>
+          </div>
+
+        
+        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+        </div>
+
+        <div class="texto">
+          <p>Este curso tem como objetivo desenvolver a seguinte competência:
+Realizar procedimentos básicos de costura e acabamento de peças do vestuário.
+</p>
+        </div>
+      </div>
+    </section>
+<div class="overlay" id="overlay"></div>
+
+  <script>
+    
+/*Introdução à Informática - Windows e Office*/ 
+const body = document.body;
+const Sobre = document.querySelector('.pags-sobre');
+const overlay = document.getElementById('overlay');
+const butaoAbrir = document.getElementById('butaoAbrido');
+const botaoFechar = document.getElementById('butaoFechar');
+
+function buttonAbrir(){
+    Sobre.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar(){
+    Sobre.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
+overlay.addEventListener('click', butaoFechar);
+
+  </script>
 </body>
 </html>
