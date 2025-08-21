@@ -63,88 +63,109 @@
           </div>
         </div>
 
-        <div class="card">
-          <h3>Massagem Relaxante</h3>
-          <p>Carga Horária: 24 horas</p>
-          <p>Valor: R$ 161,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="Sobrea" onclick="buttonAbrir2()">Sobre</button>
+          <div class="card">
+            <h3>Massagem Relaxante</h3>
+            <p>Carga Horária: 24 horas</p>
+            <p>Valor: R$ 161,00</p>
+            <div class="buttons">
+              <button class="inscrever">Inscreva-se</button>
+              <button class="sobrea" onclick="buttonAbrir2()">Sobre</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Primeiros Socorros na Escola</h3>
+            <p>Carga Horária: 40 horas</p>
+            <p>Valor: R$ 180,00</p>
+            <div class="buttons">
+              <button class="inscrever">Inscreva-se</button>
+              <button class="sobre" onclick="buttonAbrir3()">Sobre</button>
+            </div>
           </div>
         </div>
-
-        <div class="card">
-          <h3>Primeiros Socorros na Escola</h3>
-          <p>Carga Horária: 40 horas</p>
-          <p>Valor: R$ 180,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <!-- Seção Noturno -->
-    <section class="turno-section" hidden>
-      <h2>Noturno - 19H às 22H</h2>
-      <div class="cursos">
-
-      </div>
-    </section>
-
-    <!--SOBRE-->
-    <section class="pags-sobre">
-
-      <div class="sobre-tec-infor">
-
-        <div class="topo-sobre">
-
-          <div class="titulo">
-            <h1>Limpeza de Pele </h1>
-          </div>
-
         
-        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+      </section>
+
+      <!-- Seção Noturno -->
+      <section class="turno-section" hidden>
+        <h2>Noturno - 19H às 22H</h2>
+        <div class="cursos">
+
         </div>
+      </section>
 
-        <div class="texto">
-          <p>Não tem Objetivo</p>
-        </div>
-      </div>
-    </section>
+      <!--SOBRE-->
+      <section class="pags-sobre">
 
-    <!--Montagem-->
-    <section class="pags-sobre" id="curso-mon">
+        <div class="sobre-tec-infor">
 
-      <div class="sobre-tec-infor">
+          <div class="topo-sobre">
 
-        <div class="topo-sobre">
+            <div class="titulo">
+              <h1>Limpeza de Pele </h1>
+            </div>
 
-          <div class="titulo">
-            <h1>Massagem Relaxante</h1>
+          
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
           </div>
 
-
-        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          <div class="texto">
+            <p>Não tem Objetivo</p>
+          </div>
         </div>
+      </section>
 
-        <div class="texto">
-          <p>Não tem objetivo</p>
+      <!--Montagem-->
+      <section class="pags-sobre" id="curso-ml">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Massagem Relaxante</h1>
+            </div>
+
+
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Não tem objetivo</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <div class="overlay" id="overlay"></div>
-    
-  </main>
-  <script>
+      </section>
+      <div class="overlay" id="overlay"></div>
 
-/*Introdução à Informática - Windows e Office*/ 
+            <section class="pags-sobre" id="curso-ps">
+
+        <div class="sobre-tec-infor">
+
+          <div class="topo-sobre">
+
+            <div class="titulo">
+              <h1>Primeiros Socorros na Escola</h1>
+            </div>
+
+
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          </div>
+
+          <div class="texto">
+            <p>Não tem objetivo</p>
+          </div>
+        </div>
+      </section>
+      <div class="overlay" id="overlay"></div>
+
+    </main>
+
+<script>
+/* Introdução à Informática - Windows e Office */ 
 const body = document.body;
 const Sobre = document.querySelector('.pags-sobre');
 const overlay = document.getElementById('overlay');
-const butaoAbrir = document.getElementById('butaoAbrido');
+// tirei o butaoAbrir, pq não existe no HTML
 const botaoFechar = document.getElementById('butaoFechar');
 
 function buttonAbrir(){
@@ -159,25 +180,39 @@ function buttonFechar(){
     document.body.style.overflow = 'auto';
 }
 
-butaoAbrir.addEventListener('click', butaoAbrido);
-botaoFechar.addEventListener('click', butaoFechar);
-overlay.addEventListener('click', butaoFechar);
+// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
+// botaoFechar funciona normal pelo onclick do span
+overlay.addEventListener('click', buttonFechar);
 
 
-
-/*Montagem e Manutenção de Computadores / Notebooks*/
-const sobrea = document.querySelector('#curso-mon');
+/* Massagem Relaxante */
+const sobrea = document.querySelector('#curso-ml');
 function buttonAbrir2(){
-    Sobrea.classList.add('active');
+    sobrea.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar2(){
-    Sobrea.classList.remove('active');
+    sobrea.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
-  </script>
-</body>
-</html>
+
+/* Primeiros Socorros */
+const sobreb = document.querySelector('#curso-ps');
+function buttonAbrir3(){
+    sobreb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar3(){
+    sobreb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+</script>
+
+  </body>
+  </html>
