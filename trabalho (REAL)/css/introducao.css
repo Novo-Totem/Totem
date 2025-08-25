@@ -37,11 +37,11 @@ header {
 header img {
     height: 80px;
 }
-#imgDesconto{
+#imgDesconto img{
     transform: rotate(15deg);
     width: 400px;
-    top: -7%;
-    left: 45%;
+    top: -3%;
+    left: 65%;
     z-index: 999;
     position: absolute;
 }
@@ -188,6 +188,8 @@ header img:first-child {
 }
 
 /* Responsividade */
+
+/* TABLET */
 @media (max-width: 768px) {
     header {
         padding: 20px 30px;
@@ -197,6 +199,15 @@ header img:first-child {
         height: 60px;
     }
     
+    body{
+        background-attachment: fixed;
+    }
+    #imgDesconto img{
+        max-width: 38%;
+        position: absolute;
+        top: -5%;
+        left: 63%;
+    }
     .container {
         padding: 30px;
     }
@@ -207,15 +218,42 @@ header img:first-child {
     }
     
     .carrosel {
-        height: 350px;
+        width: 700px;
+        height: 400px;
     }
     
     .botao a {
         padding: 15px 40px;
         font-size: 1.5rem;
     }
-}
+    .footer{
+        height: 13vh;   
+    }
+    .logoSenac img {
+        max-height: 40px;
+        margin-block: auto;
+    }
 
+    .footer-creditos p {
+        font-size: 1rem;
+        margin-left: 55px;
+        width: 100px;   
+    }
+    .colunas {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0px;
+        margin-left: 30px;
+        gap: 1px;
+    }
+
+    .logo-professor {
+        display: flex;
+        align-items: center;
+}
+}
+/* MOBILE */
 @media (max-width: 480px) {
     header {
         flex-direction: column;
@@ -236,14 +274,7 @@ header img:first-child {
         height: 250px;
     }
 }
-
-@media (max-width: 1080px) {
-    #imgDesconto img{
-        transform: rotate(15deg);
-        width: 400px;
-        top: 0%;
-        left: 70%;
-        z-index: 999;
-        position: absolute;
-    }
+/* PC */
+@media (max-width: 1920px) {
+    
 }
