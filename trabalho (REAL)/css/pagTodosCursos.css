@@ -110,7 +110,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
-
+  min-width: 380px;
   width: 480px;
 
 }
