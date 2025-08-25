@@ -271,6 +271,7 @@ header img:first-child {
     }
     
     .carrosel {
+        width: 425px;
         height: 250px;
     }
 }
