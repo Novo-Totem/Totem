@@ -25,24 +25,6 @@
     <section class="turno-section" hidden>
       <h2>Matutino - 08H às 12H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
     
@@ -59,7 +41,7 @@
           <p>Valor: R$ 316,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir17()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
 
@@ -69,7 +51,7 @@
             <p>Valor: R$ 161,00</p>
             <div class="buttons">
               <button class="inscrever">Inscreva-se</button>
-              <button class="sobre" onclick="buttonAbrir2()">Sobre</button>
+              <button class="sobre" onclick="buttonAbrir18()" id="butaoAbrido">Sobre</button>
             </div>
           </div>
 
@@ -79,7 +61,7 @@
             <p>Valor: R$ 180,00</p>
             <div class="buttons">
               <button class="inscrever">Inscreva-se</button>
-              <button class="sobre" onclick="buttonAbrir3()">Sobre</button>
+              <button class="sobre" onclick="buttonAbrir19()" id="butaoAbrido">Sobre</button>
             </div>
           </div>
         </div>
@@ -90,12 +72,11 @@
       <section class="turno-section" hidden>
         <h2>Noturno - 19H às 22H</h2>
         <div class="cursos">
-
         </div>
       </section>
 
-      <!--SOBRE-->
-      <section class="pags-sobre">
+      <!--SOBRE Saúde-->
+      <section class="pags-sobre" id="curso-Lim"> 
 
         <div class="sobre-tec-infor">
 
@@ -106,7 +87,7 @@
             </div>
 
           
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar17()">×</span>
           </div>
 
           <div class="texto">
@@ -127,7 +108,7 @@
             </div>
 
 
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar18()">×</span>
           </div>
 
           <div class="texto">
@@ -148,7 +129,7 @@
             </div>
 
 
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar19()">×</span>
           </div>
 
           <div class="texto">
@@ -156,6 +137,7 @@
           </div>
         </div>
       </section>
+      <!--Saúde FIM-->
       <div class="overlay" id="overlay"></div>
 
     </main>
@@ -163,55 +145,54 @@
 <script>
 /* Introdução à Informática - Windows e Office */ 
 const body = document.body;
-const Sobre = document.querySelector('.pags-sobre');
+const SobreSa = document.querySelector('#curso-Lim');
 const overlay = document.getElementById('overlay');
-// tirei o butaoAbrir, pq não existe no HTML
+const butaoAbrir = document.getElementById('butaoAbrido');
 const botaoFechar = document.getElementById('butaoFechar');
 
-function buttonAbrir(){
-    Sobre.classList.add('active');
+function buttonAbrir17(){
+    SobreSa.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar(){
-    Sobre.classList.remove('active');
+function buttonFechar17(){
+    SobreSa.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
-// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
-// botaoFechar funciona normal pelo onclick do span
-overlay.addEventListener('click', buttonFechar);
-
-
 /* Massagem Relaxante */
-const sobrea = document.querySelector('#curso-ml');
-function buttonAbrir2(){
-    sobrea.classList.add('active');
+const SobreSaa = document.querySelector('#curso-ml');
+function buttonAbrir18(){
+    SobreSaa.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar2(){
-    sobrea.classList.remove('active');
+function buttonFechar18(){
+    SobreSaa.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
 /* Primeiros Socorros */
-const sobreb = document.querySelector('#curso-ps');
-function buttonAbrir3(){
-    sobreb.classList.add('active');
+const SobreSab = document.querySelector('#curso-ps');
+function buttonAbrir19(){
+    SobreSab.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar3(){
-    sobreb.classList.remove('active');
+function buttonFechar19(){
+    SobreSab.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
+overlay.addEventListener('click', buttonFechar);
 </script>
 
   </body>

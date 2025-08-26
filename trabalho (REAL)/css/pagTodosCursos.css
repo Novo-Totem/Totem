@@ -170,7 +170,7 @@ button:active {
   background: #1d4ed8;
 }
 
-.pags-sobre {
+/*.pags-sobre {
   width: 50%;
   height: 300px;
   padding: 30px;
@@ -188,7 +188,7 @@ button:active {
 .topo-sobre {
   display: flex;
   justify-content: space-between;
-}
+}*/
 
 .titulo {
   font-size: 0.9rem;
@@ -276,6 +276,84 @@ footer {
 .subir-pagina:hover {
   background-color: #c98811; 
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/*PARTE DOS SUB-CARDS DO SOBRE*/
+.pags-sobre{
+  height: 400px;
+  width: 500px;
+  padding: 20px;
+  position:fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #2447a7;
+  z-index: 2;
+  visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0, 0.5);
+
+  p {
+    font-size: 1.3rem
+  }
+}
+
+.topo-sobre {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.titulo {
+  width: 378px;
+}
+
+#butaoFechar {
+  max-height: 93px;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#butaoFechar:active, #butaoFechar:focus {
+  color: #f97316;
+  transform: rotate(90deg);
+}
+
+
+.pags-sobre.active{
+  opacity: 1;
+  visibility: visible;
+
+}
+
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.05);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.gastronomia p{
+  font-size: 15px;
 }
 
 /* Responsividade */

@@ -25,24 +25,6 @@
     <section class="turno-section" hidden>
       <h2>Matutino - 08H às 12H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -50,24 +32,6 @@
     <section class="turno-section" hidden>
       <h2>Vespertino - 14H às 18H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -81,7 +45,7 @@
           <p>Valor: R$ 222,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir25()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -90,13 +54,13 @@
           <p>Valor: R$ 113,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre"  onclick="buttonAbrir2()" id="butaoAbrido">Sobre</button>
+            <button class="sobre"  onclick="buttonAbrir26()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
     </section>
-<!--SOBRE-->
-    <section class="pags-sobre">
+    <!--Comunicação SOBRE-->
+    <section class="pags-sobre" id="curso-Dic">
 
       <div class="sobre-tec-infor">
 
@@ -107,7 +71,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar25()">×</span>
           
         </div>
 
@@ -129,7 +93,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar26()">×</span>
           
         </div>
 
@@ -138,39 +102,40 @@
         </div>
       </div>
     </section>
+    <!--Comunicação FIM-->
   <div class="overlay" id="overlay"></div>
   </main>
 <script>
   const body = document.body;
-  const Sobre = document.querySelector('.pags-sobre');
+  const SobreCm = document.querySelector('#curso-Dic');
   const overlay = document.getElementById('overlay');
   const butaoAbrir = document.getElementById('butaoAbrido');
   const botaoFechar = document.getElementById('butaoFechar');
   
   /*Dicção, Desinibição e Oratória*/
-  function buttonAbrir(){
-    Sobre.classList.add('active');
+  function buttonAbrir25(){
+    SobreCm.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar(){
-    Sobre.classList.remove('active');
+  function buttonFechar25(){
+    SobreCm.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
   /*Dicção, Desinibição e Oratória FIM*/
   
   /*Oratória: Comunicação e Técnicas de Apresentação*/
-  const Sobrea = document.querySelector("#curso-Ora");
-  function buttonAbrir2(){
-    Sobrea.classList.add('active');
+  const SobreCma = document.querySelector("#curso-Ora");
+  function buttonAbrir26(){
+    SobreCma.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar2(){
-    Sobrea.classList.remove('active');
+  function buttonFechar26(){
+    SobreCma.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }

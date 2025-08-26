@@ -25,24 +25,6 @@
     <section class="turno-section" hidden>
       <h2>Matutino - 08H às 12H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -56,7 +38,7 @@
           <p>Valor: R$ 436,00</p>
           <div class="buttons">
             <button class="inscrever" >Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir21()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -70,8 +52,8 @@
     </section>
   </main>
 
-<!--SOBRE-->
-    <section class="pags-sobre">
+<!--Moda SOBRE-->
+    <section class="pags-sobre" id="curso-Mo">
 
       <div class="sobre-tec-infor">
 
@@ -82,7 +64,7 @@
           </div>
 
         
-        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+        <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar21()">×</span>
         </div>
 
         <div class="texto">
@@ -92,25 +74,25 @@ Realizar procedimentos básicos de costura e acabamento de peças do vestuário.
         </div>
       </div>
     </section>
+    <!--Moda FIM-->
 <div class="overlay" id="overlay"></div>
 
-  <script>
-    
-/*Introdução à Informática - Windows e Office*/ 
+<script>
+/*Modelagem e Costura para Inciantes*/ 
 const body = document.body;
-const Sobre = document.querySelector('.pags-sobre');
+const SobreMo = document.querySelector('#curso-Mo');
 const overlay = document.getElementById('overlay');
 const butaoAbrir = document.getElementById('butaoAbrido');
 const botaoFechar = document.getElementById('butaoFechar');
 
-function buttonAbrir(){
-    Sobre.classList.add('active');
+function buttonAbrir21(){
+    SobreMo.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar(){
-    Sobre.classList.remove('active');
+function buttonFechar21(){
+    SobreMo.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
@@ -119,6 +101,6 @@ butaoAbrir.addEventListener('click', butaoAbrido);
 botaoFechar.addEventListener('click', butaoFechar);
 overlay.addEventListener('click', butaoFechar);
 
-  </script>
+</script>
 </body>
 </html>

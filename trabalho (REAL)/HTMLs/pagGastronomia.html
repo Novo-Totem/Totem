@@ -25,24 +25,6 @@
     <section class="turno-section" hidden>
       <h2>Matutino - 08H às 12H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -55,7 +37,7 @@
           <p>Valor: R$ 579,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir20()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -68,8 +50,8 @@
 
       </div>
     </section>
-    <!--SOBRE-->
-    <section class="pags-sobre">
+    <!--SOBRE Gastronomia-->
+    <section class="pags-sobre" id="curso-Sal">
 
       <div class="sobre-tec-infor">
 
@@ -80,7 +62,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar20()">×</span>
           
         </div>
 
@@ -89,24 +71,25 @@
         </div>
       </div>
     </section>
+    <!--Gastronomia FIM-->
     <div class="overlay" id="overlay"></div>
   </main>
   <script>
   const body = document.body;
-  const Sobre = document.querySelector('.pags-sobre');
+  const SobreGa = document.querySelector('#curso-Sal');
   const overlay = document.getElementById('overlay');
   const butaoAbrir = document.getElementById('butaoAbrido');
   const botaoFechar = document.getElementById('butaoFechar');
   
-  /*Administração Financeira no Coméricio*/
-  function buttonAbrir(){
-    Sobre.classList.add('active');
+  /*Preparo de Salgados*/
+  function buttonAbrir20(){
+    SobreGa.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar(){
-    Sobre.classList.remove('active');
+  function buttonFechar20(){
+    SobreGa.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }

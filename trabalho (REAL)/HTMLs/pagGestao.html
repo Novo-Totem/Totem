@@ -32,7 +32,7 @@
           <p>Valor: R$ 99,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir22()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
           <p>Valor: R$ 99,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir2()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir23()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -64,15 +64,15 @@
           <p>Valor: R$ 150,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir3()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir24()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
 
       </div>
     </section>
 
-      <!--SOBRE-->
-      <section class="pags-sobre">
+      <!--Gestão SOBRE-->
+      <section class="pags-sobre" id="curso-Pre">
 
         <div class="sobre-tec-infor">
 
@@ -83,7 +83,7 @@
             </div>
 
           
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar22()">×</span>
           </div>
 
           <div class="texto">
@@ -92,8 +92,7 @@
         </div>
       </section>
 
-      <!--Montagem-->
-      <section class="pags-sobre" id="curso-ml">
+      <section class="pags-sobre" id="curso-Pre">
 
         <div class="sobre-tec-infor">
 
@@ -104,7 +103,7 @@
             </div>
 
 
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar23()">×</span>
           </div>
 
           <div class="texto">
@@ -114,7 +113,7 @@
       </section>
       <div class="overlay" id="overlay"></div>
 
-            <section class="pags-sobre" id="curso-ps">
+            <section class="pags-sobre" id="curso-Pad">
 
         <div class="sobre-tec-infor">
 
@@ -125,7 +124,7 @@
             </div>
 
 
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar24()">×</span>
           </div>
 
           <div class="texto">
@@ -133,63 +132,56 @@
           </div>
         </div>
       </section>
+      <!--Gestão FIM-->
       <div class="overlay" id="overlay"></div>
-
     </main>
-
 <script>
-/* Introdução à Informática - Windows e Office */ 
 const body = document.body;
-const Sobre = document.querySelector('.pags-sobre');
+const SobreGe = document.querySelector('#curso-Pre');
 const overlay = document.getElementById('overlay');
-// tirei o butaoAbrir, pq não existe no HTML
+const butaoAbrir = document.getElementById('butaoAbrido');
 const botaoFechar = document.getElementById('butaoFechar');
 
-function buttonAbrir(){
-    Sobre.classList.add('active');
+function buttonAbrir22(){
+    SobreGe.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar(){
-    Sobre.classList.remove('active');
+function buttonFechar22(){
+    SobreGe.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
-// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
-// botaoFechar funciona normal pelo onclick do span
+const sobreGea = document.querySelector('#curso-Pre');
+function buttonAbrir23(){
+    sobreGea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar23(){
+    sobreGea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+const sobreGeb = document.querySelector('#curso-Pad');
+function buttonAbrir24(){
+    sobreGeb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar24(){
+    sobreGeb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
 overlay.addEventListener('click', buttonFechar);
-
-
-/* Massagem Relaxante */
-const sobrea = document.querySelector('#curso-ml');
-function buttonAbrir2(){
-    sobrea.classList.add('active');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function buttonFechar2(){
-    sobrea.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-/* Primeiros Socorros */
-const sobreb = document.querySelector('#curso-ps');
-function buttonAbrir3(){
-    sobreb.classList.add('active');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function buttonFechar3(){
-    sobreb.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
 </script>
-
 </body>
 </html>

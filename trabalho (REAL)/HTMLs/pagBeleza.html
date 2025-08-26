@@ -25,24 +25,6 @@
     <section class="turno-section" hidden>
       <h2>Matutino - 08H às 12H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -56,7 +38,7 @@
           <p>Valor: R$ 372,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()" id="butaoAbrido">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir27()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -72,7 +54,7 @@
           <p>Valor: R$ 277,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir2()" id="butaoAbrido">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir28()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
         <div class="card">
@@ -81,13 +63,13 @@
           <p>Valor: R$ 380,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir3()" id="butaoAbrido">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir29()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
     </section>
-<!--SOBRE-->
-    <section class="pags-sobre">
+<!--Beleza SOBRE-->
+    <section class="pags-sobre" id="curso-At">
 
       <div class="sobre-tec-infor">
 
@@ -98,7 +80,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar27()">×</span>
           
         </div>
 
@@ -120,7 +102,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar2()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar28()">×</span>
           
         </div>
 
@@ -142,7 +124,7 @@
           </div>
 
         
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar3()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar29()">×</span>
           
         </div>
 
@@ -151,55 +133,56 @@
         </div>
       </div>
     </section>
+    <!--Beleza FIM-->
         <div class="overlay" id="overlay"></div>
   </main>
 </body>
 <script>
   const body = document.body;
-  const Sobre = document.querySelector('.pags-sobre');
+  const SobreBe = document.querySelector('#curso-At');
   const overlay = document.getElementById('overlay');
   const butaoAbrir = document.getElementById('butaoAbrido');
   const botaoFechar = document.getElementById('butaoFechar');
   
   /*Atualização em Corte e Escova*/
-  function buttonAbrir(){
-    Sobre.classList.add('active');
+  function buttonAbrir27(){
+    SobreBe.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar(){
-    Sobre.classList.remove('active');
+  function buttonFechar27(){
+    SobreBe.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
   /*Atualização em Corte e Escova FIM*/
   
   /*Design e Coloração de Sobrancelhas*/
-  const Sobrea = document.querySelector('#curso-Sob');
-  function buttonAbrir2(){
-    Sobrea.classList.add('active');
+  const SobreBea = document.querySelector('#curso-Sob');
+  function buttonAbrir28(){
+    SobreBea.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar2(){
-    Sobrea.classList.remove('active');
+  function buttonFechar28(){
+    SobreBea.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
   /*Design e Coloração de Sobrancelhas FIM*/
   
   /*Extensão de Cílios*/
-  const Sobreb = document.querySelector('#curso-Exc');
-  function buttonAbrir3(){
-    Sobreb.classList.add('active');
+  const SobreBeb = document.querySelector('#curso-Exc');
+  function buttonAbrir29(){
+    SobreBeb.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function buttonFechar3(){
-    Sobreb.classList.remove('active');
+  function buttonFechar29(){
+    SobreBeb.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }

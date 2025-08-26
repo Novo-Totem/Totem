@@ -32,7 +32,7 @@
           <p>Valor: R$ 87,00</p>
           <div class="buttons">
             <button class="inscrever">Inscreva-se</button>
-            <button class="sobre" onclick="buttonAbrir()">Sobre</button>
+            <button class="sobre" onclick="buttonAbrir31()" id="butaoAbrido">Sobre</button>
           </div>
         </div>
       </div>
@@ -43,24 +43,6 @@
     <section class="turno-section" hidden>
       <h2>Vespertino - 14H às 18H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Técnico em Informática para Internet</h3>
-          <p>Carga Horária: 80 horas</p>
-          <p>Valor: R$ 200,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -68,19 +50,10 @@
     <section class="turno-section" hidden>
       <h2>Noturno - 19H às 22H</h2>
       <div class="cursos">
-        <div class="card">
-          <h3>Redação para o ENEM</h3>
-          <p>Carga Horária: 20 horas</p>
-          <p>Valor: R$ 87,00</p>
-          <div class="buttons">
-            <button class="inscrever">Inscreva-se</button>
-            <button class="sobre">Sobre</button>
-          </div>
-        </div>
       </div>
     </section>
-      <!--SOBRE-->
-      <section class="pags-sobre">
+      <!--Educacional SOBRE-->
+      <section class="pags-sobre" id="curso-Re">
 
         <div class="sobre-tec-infor">
 
@@ -91,7 +64,7 @@
             </div>
 
           
-          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar()">×</span>
+          <span id="butaoFechar" aria-label="Fechar" onclick="buttonFechar31()">×</span>
           </div>
 
           <div class="texto">
@@ -99,6 +72,7 @@
           </div>
         </div>
       </section>
+      <!--Educacional FIM-->
 
       <div class="overlay" id="overlay"></div>
 
@@ -107,25 +81,25 @@
 <script>
 /* Introdução à Informática - Windows e Office */ 
 const body = document.body;
-const Sobre = document.querySelector('.pags-sobre');
+const SobreEd = document.querySelector('#curso-Re');
 const overlay = document.getElementById('overlay');
-// tirei o butaoAbrir, pq não existe no HTML
+const butaoAbrir = document.getElementById('butaoAbrido');
 const botaoFechar = document.getElementById('butaoFechar');
 
-function buttonAbrir(){
-    Sobre.classList.add('active');
+function buttonAbrir31(){
+    SobreEd.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-function buttonFechar(){
-    Sobre.classList.remove('active');
+function buttonFechar31(){
+    SobreEd.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
-// esse trecho estava quebrado, tirei o eventListener de "butaoAbrido"
-// botaoFechar funciona normal pelo onclick do span
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
 overlay.addEventListener('click', buttonFechar);
 
 </script>
