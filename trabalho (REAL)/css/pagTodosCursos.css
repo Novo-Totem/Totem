@@ -12,7 +12,6 @@ body {
   background-size: cover;
   color: #f1f5f9;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2rem;
 }
@@ -21,26 +20,28 @@ body {
 .container {
   max-width: 1100px;
   width: 100%;
-  margin-top: 7vh;
+  margin-top: 10.5vh;
 }
 
 /* Cabeçalho */
 .topo {
-  padding: 2rem;
   margin-bottom: 2rem;
-  margin-left: -2rem;
   text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
   position: fixed;
-  overflow: hidden;
   top: 0%;
-  background-color: rgba(64, 61, 252, 1);
+  background-color: rgba(64, 61, 252, 0.4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 100%;
   z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header {
+  background-color: #023e73e8;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .topo h1 {
@@ -68,11 +69,21 @@ body {
   color: white;
   margin-block: 10px;
   background: #f97316;
+  position: fixed;
+  top: 50px;
+}
+
+.botao-voltar img {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
 }
 
 .area-botao-voltar {
   display: flex;
   justify-content: flex-start;
+  width: 1016px;
 }
 
 /* Seções */
@@ -81,11 +92,12 @@ body {
 }
 
 .turno-section h2 {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   border-left: 4px solid #f97316;
   padding-left: 0.5rem;
+  margin-block: 20px;
 }
 
 /* Grid dos cursos */
@@ -110,8 +122,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
-  min-width: 380px;
-  width: 480px;
+  width: 380px;
+  min-width: 480px;
 
 }
 
@@ -192,15 +204,16 @@ button:active {
 }
 
 .titulo {
-  font-size: 0.9rem;
+  font-size: 01rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin: 20px;
   border-left: 4px solid #f97316;
   padding-left: 0.5rem;
 }
 
 .titulos {
-    margin: 30px;
+  margin: 10px;
+  font-size: 1rem;
 }
 
 .texto {
@@ -225,7 +238,7 @@ button:active {
 }
 
 footer {
-    height: 80px;
+    height: 90px;
     margin-bottom: 20px;
     position: fixed;
     bottom: 0%;
@@ -253,7 +266,7 @@ footer {
 
 .btn img {
   width: 60px;
-  height: 30px;
+  height: 50px;
 }
 
 /*PARTE DOS SUB-CARDS DO SOBRE*/
@@ -355,4 +368,14 @@ footer {
   .turno-section h2 {
     font-size: 1.1rem;
   }
+}
+
+@media (min-width: 1081px) {
+
+  body {
+    background: url(../img/RESOLUÇÃO\ PC.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 }

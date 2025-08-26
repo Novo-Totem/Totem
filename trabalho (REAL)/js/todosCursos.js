@@ -1,136 +1,130 @@
 /*Introdução à Informática - Windows e Office*/ 
 const body = document.body;
-const Sobre = document.querySelector('.pags-sobre');
+const SobreTi = document.querySelector('.pags-sobre');
 const overlay = document.getElementById('overlay');
 const butaoAbrir = document.getElementById('butaoAbrido');
 const botaoFechar = document.getElementById('butaoFechar');
 
 function buttonAbrir(){
-    Sobre.classList.add('active');
+    SobreTi.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar(){
-    Sobre.classList.remove('active');
+    SobreTi.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
-butaoAbrir.addEventListener('click', butaoAbrido);
-botaoFechar.addEventListener('click', butaoFechar);
-overlay.addEventListener('click', butaoFechar);
-
-
-
 /*Montagem e Manutenção de Computadores / Notebooks*/
-const Sobrea = document.querySelector('#curso-mon');
+const SobreTia = document.querySelector('#curso-mon');
 function buttonAbrir2(){
-    Sobrea.classList.add('active');
+    SobreTia.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar2(){
-    Sobrea.classList.remove('active');
+    SobreTia.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Montagem e Manutenção de Computadores / NotebooksFIM*/ 
 
 /*Programação para Robótica*/
-const Sobreb = document.querySelector('#curso-rob');
+const SobreTib = document.querySelector('#curso-rob');
 function buttonAbrir3(){
-    Sobreb.classList.add('active');
+    SobreTib.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar3(){
-    Sobreb.classList.remove('active');
+    SobreTib.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Programação para Robótica FIM*/ 
 
 /*Power BI*/
-const Sobrec = document.querySelector('#curso-BI');
+const SobreTic = document.querySelector('#curso-BI');
 function buttonAbrir4(){
-    Sobrec.classList.add('active');
+    SobreTic.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar4(){
-    Sobrec.classList.remove('active');
+    SobreTic.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Power BI FIM*/ 
 
 /*Programação de Sistemas*/
-const Sobred = document.querySelector('#curso-Sys');
+const SobreTid = document.querySelector('#curso-Sys');
 function buttonAbrir5(){
-    Sobred.classList.add('active');
+    SobreTid.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar5(){
-    Sobred.classList.remove('active');
+    SobreTid.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Programação de Sistemas FIM*/ 
 
 /*4.0 - Técnico em Manutenção e Suporte em Informática*/
-const Sobree = document.querySelector('#curso-Sup');
+const SobreTie = document.querySelector('#curso-Sup');
 function buttonAbrir6(){
-    Sobree.classList.add('active');
+    SobreTie.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar6(){
-    Sobree.classList.remove('active');
+    SobreTie.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*4.0 - Técnico em Manutenção e Suporte em Informática FIM*/ 
 
 /*Excel Básico*/
-const Sobref = document.querySelector('#curso-Exb');
+const SobreTif = document.querySelector('#curso-Exb');
 function buttonAbrir7(){
-    Sobref.classList.add('active');
+    SobreTif.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar7(){
-    Sobref.classList.remove('active');
+    SobreTif.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Excel Básico FIM*/ 
 
 /*Excel Básico*/
-const Sobreg = document.querySelector('#curso-Exa');
+const SobreTig = document.querySelector('#curso-Exa');
 function buttonAbrir8(){
-    Sobreg.classList.add('active');
+    SobreTig.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function buttonFechar8(){
-    Sobreg.classList.remove('active');
+    SobreTig.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 /*Excel Básico FIM*/ 
 
 /*Comércio*/
+const SobreCo = document.querySelector('#curso-Adf');
 /*Administração Financeira no Coméricio*/
-  const SobreCo = document.querySelector('#curso-Adf');
   function buttonAbrir9(){
     SobreCo.classList.add('active');
     overlay.classList.add('active');
@@ -144,7 +138,7 @@ function buttonFechar8(){
   }
   /*Administração Financeira no Coméricio Fim*/
   
-  /*Como Vender na Internet e Redes Socias*/
+  /*Administração Financeira no Coméricio*/
   const SobreCoa = document.querySelector('#curso-Ven');
   function buttonAbrir10(){
     SobreCoa.classList.add('active');
@@ -157,8 +151,8 @@ function buttonFechar8(){
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
-  /*Como Vender na Internet e Redes Socias Fim*/
-   
+  /*Administração Financeira no Coméricio Fim*/
+  
   /*Empreendedorismo Digital*/
   const SobreCob = document.querySelector('#curso-Emp');
   function buttonAbrir11(){
@@ -248,10 +242,11 @@ function buttonFechar8(){
     document.body.style.overflow = 'auto';
   }
   /*Técnicas Avançandas de Vendas e Atendimento Fim*/
-  
-  /*Saúde*/
-  const SobreSa = document.querySelector('#curso-Lim')
-  function buttonAbrir17(){
+/*Comércio Fim*/
+
+/*Saúde*/
+const SobreSa = document.querySelector('#curso-Lim');
+function buttonAbrir17(){
     SobreSa.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -290,3 +285,190 @@ function buttonFechar19(){
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+/*Saúde FIM*/
+
+/*Gastronomia*/
+const SobreGa = document.querySelector('#curso-Sal');
+
+/*Preparo de Salgados*/
+function buttonAbrir20(){
+    SobreGa.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar20(){
+    SobreGa.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+/*Gastronomia FIM*/
+
+/*Moda*/
+const SobreMo = document.querySelector('#curso-Mo');
+function buttonAbrir21(){
+    SobreMo.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar21(){
+    SobreMo.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+/*Moda Fim*/
+
+/*Gestão*/
+const SobreGe = document.querySelector('#curso-Pre');
+function buttonAbrir22(){
+    SobreGe.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar22(){
+    SobreGe.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+const sobreGea = document.querySelector('#curso-Pre');
+function buttonAbrir23(){
+    sobreGea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar23(){
+    sobreGea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+const sobreGeb = document.querySelector('#curso-Pad');
+function buttonAbrir24(){
+    sobreGeb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar24(){
+    sobreGeb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+/*Gestão FIM*/
+
+/*Comunicação*/
+const SobreCm = document.querySelector('#curso-Dic');
+/*Dicção, Desinibição e Oratória*/
+  function buttonAbrir25(){
+    SobreCm.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar25(){
+    SobreCm.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Dicção, Desinibição e Oratória FIM*/
+  
+  /*Oratória: Comunicação e Técnicas de Apresentação*/
+  const SobreCma = document.querySelector("#curso-Ora");
+  function buttonAbrir26(){
+    SobreCma.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar26(){
+    SobreCma.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Oratória: Comunicação e Técnicas de Apresentação FIM*/
+/*Comunicação FIM*/
+
+/*Beleza*/
+const SobreBe = document.querySelector('#curso-At');
+/*Atualização em Corte e Escova*/
+  function buttonAbrir27(){
+    SobreBe.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar27(){
+    SobreBe.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Atualização em Corte e Escova FIM*/
+  
+  /*Design e Coloração de Sobrancelhas*/
+  const SobreBea = document.querySelector('#curso-Sob');
+  function buttonAbrir28(){
+    SobreBea.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar28(){
+    SobreBea.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Design e Coloração de Sobrancelhas FIM*/
+  
+  /*Extensão de Cílios*/
+  const SobreBeb = document.querySelector('#curso-Exc');
+  function buttonAbrir29(){
+    SobreBeb.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function buttonFechar29(){
+    SobreBeb.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  /*Extensão de Cílios FIM*/
+/*Beleza FIM*/
+
+/*Artes*/
+const SobreAr = document.querySelector('#curso-ft');
+function buttonAbrir30(){
+    SobreAr.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar30(){
+    SobreAr.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+/*Artes FIM*/
+
+/*Educacional*/
+const SobreEd = document.querySelector('#curso-Re');
+function buttonAbrir31(){
+    SobreEd.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function buttonFechar31(){
+    SobreEd.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+/*Educacional FIM*/
+
+butaoAbrir.addEventListener('click', butaoAbrido);
+botaoFechar.addEventListener('click', butaoFechar);
+overlay.addEventListener('click', butaoFechar);

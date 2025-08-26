@@ -181,7 +181,7 @@ header input {
     text-align: center;
     padding: 30px;
     background-color: #023e73a6;
-    position: absolute;
+    position: fixed;
     bottom:0%;
     display: flex;
     justify-content: space-around;
@@ -255,4 +255,23 @@ header input {
     .card-text h2 {
         font-size: 1.2rem;
     }
+}
+
+@media (min-width: 1080px) {
+
+    .card:hover {
+        font-family: "titulo";
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        .img-card {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+    }
+
+    .footer {
+        height: 16.5vh;
+    }
+
 }
